@@ -1,0 +1,23 @@
+div{
+	margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p{
+	text-align: justify;
+}
+
+#primerParrafo::first-letter {
+    font-size: 200%;
+    
+}
