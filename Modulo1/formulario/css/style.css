@@ -1,0 +1,9 @@
+.cuadro {
+    border-style: solid;
+    border-width: 3px;
+
+}
+
+.contenido{
+	margin: 100px;
+}
