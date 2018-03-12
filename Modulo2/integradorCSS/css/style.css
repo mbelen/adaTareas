@@ -1,0 +1,53 @@
+*{
+	align-items: center;
+	font-family: sans-serif;
+}
+
+h1 {
+	background-color: #E4C9C9;
+    text-shadow: 2px 2px #FFFFFF;
+    size: 4em;
+}
+
+footer{
+	text-align: center;
+	padding: 4em;
+}
+
+img .perfil{
+	margin-left: 46%;
+
+}
+
+.redon{
+	width: 10em;
+	height: 10em;
+	
+	border-color: #FFFFFF;
+	border-style: solid;
+	border-radius: 50%;
+}
+
+.contCard{
+	margin-right: 30%;
+	margin-left: 30%;
+	padding-top: 2em;
+	text-align: center;
+	border: 0.10em solid black;
+	
+}
+
+.titulos{
+	text-align: center;
+}
+.justificado {
+	text-align: justify;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.icono{
+	margin: 0.5em;
+	size: 0.25em;
+}
