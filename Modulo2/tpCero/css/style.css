@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h1{
+	font-family: sans-serif;
+}
+
+p{
+	display: inline-block;
+	font-family: sans-serif;
+}
+
+.cuerpoDePagina{
+	border-style: solid;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	width:1600px ;
+	height: 800px;
+}
+
+.cabecera{
+	padding-bottom: 4em; 
+	width: 1480px;
+	height: 440px;
+	margin: auto;
+}
+
+.inscripcionNoticias{
+	text-align: center;
+}
+
+.pie{
+	padding-top: 10em;
+	text-align: center;
+}
+
+.botones{
+	padding-right: 4em;
+	text-align: right;
+}
