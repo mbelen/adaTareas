@@ -11,4 +11,5 @@ TAREAS de ADA ITW
 
 ## MODULO 2:
 + (09/03/2018) TPCero - Saber que es un Mock y como utilizarlo.
-+ (09/03/2028) integradorCSS - TP para integrar todo lo aprendido en css hasta el dia de hoy.
++ (09/03/2028) integradorCSS - TP para integrar CSS (Tengo que corregirlo)
++ (16/03/2018) integradorResponsive - TP de integracion al responsive (En Proceso...)

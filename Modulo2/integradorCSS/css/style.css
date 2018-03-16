@@ -4,7 +4,7 @@
 }
 
 h1 {
-	background-color: #E4C9C9;
+	background-color: pink;
     text-shadow: 2px 2px #FFFFFF;
     size: 4em;
 }
@@ -12,6 +12,18 @@ h1 {
 footer{
 	text-align: center;
 	padding: 4em;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:visited{
+
+}
+
+a:hover{
+	color:pink;
 }
 
 img .perfil{
@@ -22,8 +34,7 @@ img .perfil{
 .redon{
 	width: 10em;
 	height: 10em;
-	
-	border-color: #FFFFFF;
+	border-color: pink;
 	border-style: solid;
 	border-radius: 50%;
 }
@@ -51,3 +62,10 @@ img .perfil{
 	margin: 0.5em;
 	size: 0.25em;
 }
+
+
+/*
+.pais{
+	width: 5em;
+}
+*/

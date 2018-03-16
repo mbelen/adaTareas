@@ -1,0 +1,59 @@
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+header{
+	height: 2em;
+	width: 100%;
+}
+
+nav{
+	padding-top: 0.25em;
+	display: inline-block;
+}
+
+a{
+ 	text-decoration: none;
+ 	font-family: sans-serif;
+}
+
+figure.logo{
+	padding: 0;
+	width: 2em;
+	height: 2em;
+	float: right;
+}
+
+
+
+img{
+	width: 2em;
+	height: 2em;
+}
+
+section{
+	width: 90%;
+	height: 50%;
+	padding-right: 5%;
+	padding-left: 5%;
+
+}
+
+.foto{
+	width: 200px; 
+	height: 200px;
+	display: inline-block;
+}
+
+figcaption{
+	text-align: center;
+}
+
+figure.panel{
+	text-align: center;
+	width: 250px;
+	position: relative;
+	display: inline-block;
+}
