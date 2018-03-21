@@ -1,0 +1,22 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	margin-right: 1em;
+}
+
+.mainContainer{
+	padding:1em 3em 1em 3em;
+}
+
+.barra1, .barra2{
+	background-color: gray;
+	height: 4em;
+	padding: 1em;
+	
+}
+
+
+
