@@ -1,0 +1,40 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*Mayusculas*/
+button{
+	text-transform: uppercase;
+}
+
+.mainContainer{
+	text-align: center;
+	margin: auto;
+}
+
+/* Quito bordes */
+.btn-default{
+	border-color: #FFFFFF
+}
+
+/* para la galeria de imagenes*/
+.item{
+	position: relative;
+
+}
+
+.imgTacos{
+	width: 100%;
+	height: auto;
+}
+
+.overlay{
+	position: absolute;
+	background-color: #D56918;
+	color: white;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	display: none;
+}
