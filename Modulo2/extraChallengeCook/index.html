@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Challenge Cook</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+	<script type="text/javascript" src="less/less.min.js"></script>
+	
 </head>
 <body>
 	<div class="mainContainer">
@@ -18,7 +20,7 @@
 						<button type="button" class="btn btn-default boton">Home</button>
 
 						<div class="btn-group" role="group">
-						    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <button type="button" class="btn btn-default boton dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						      Platos
 						    	<span class="caret"></span>
 						    </button>
@@ -32,36 +34,102 @@
 						    </ul>
 						</div>
 
-						<button type="button" class="btn btn-default">Sobre Mi</button>
+						<button type="button" class="btn btn-default boton">Sobre Mi</button>
 
-						<button type="button" class="btn btn-default">Contacto</button>
+						<button type="button" class="btn btn-default boton">Contacto</button>
 
 					</div>
 				</nav>
 			</div>
 		</header>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="item">
-				    <img src="img/home-header/img-1.jpg" class= "imgTacos" alt="tacos">
-						<div class="overlay">
-							 	<h6>Mayo 21, 2017</h6>
-								<p>Receta Nueva: Tacos a la mexicana</p>
+
+		<div class="galeria">
+			<div class="row fila_galeria">
+				<div class="col-md-3 col-xs-12 columna1">
+					<div class="item">
+						<img src="img/home-header/img-1.jpg">
+						<div class="texto">
+							<p>
+								<strong>March XX XX:XX</strong><br>
+								Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+							</p>
 						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xs-12 columna2">
+					<div class="item">
+						<img src="img/home-header/img-2.jpg">
+						<div class="texto">
+							<p>
+								<strong>March XX XX:XX</strong><br>
+								Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xs-12 columna3">
+					<div class="item">
+						<img src="img/home-header/img-3.jpg">
+						<div class="texto">
+							<p>
+								<strong>March XX XX:XX</strong>
+								<br>
+								Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xs-12 columna4">
+					<div class="item">
+						<img src="img/home-header/img-4.jpg">
+						<div class="texto">
+							<p>
+								<strong>March XX XX:XX</strong><br>
+								Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="col-md-3">
-				
-			</div>
-			<div class="col-md-3">
-				
-			</div>
-			<div class="col-md-3">
-				
+		<div class="fotos_botones">
+			
+			<div class="botonera">
+				<img src="img/botones/sushi.jpeg" alt="sushi">
+				<p>Platos</p>
 			</div>
 			
+			<div class="botonera">
+				<img src="img/botones/verduras.jpeg" alt="verduras">
+				<p>Exoticos</p>
+			</div>
+			
+			<div class="botonera">
+				<img src="img/botones/teriyaki.jpeg" alt="teriyaki">
+				<p>Recetas</p>
+			</div>
+
 		</div>
+
+		<div class="multiMed">
+			<video src="https://www.youtube.com/watch?v=PFf2ghIR8os" width="300" height="208" controls ></video> 
+			<div class="profile">
+				<a href="#"><p>Sobre Mi</p></a>
+				<figure>
+					<img src="img/narda.jpg">
+					<figcaption>
+						<h4>Narda Lepes</h4>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper massa arcu, vel porta velit finibus ac. Nulla luctus velit. 
+					</figcaption>
+				</figure>
+				<a href="#"><p>NewsLetter</p></a>
+			</div>
+		</div>
+
 	</div>
 	<!-- Llamadas a js -->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>

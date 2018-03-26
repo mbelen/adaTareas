@@ -31,6 +31,9 @@ img .perfil{
 
 }
 
+.perfil{
+    position: relative;
+}
 .redon{
 	width: 10em;
 	height: 10em;
@@ -64,8 +67,11 @@ img .perfil{
 }
 
 
-/*
+
 .pais{
+    position:absolute;
 	width: 5em;
-}
-*/
+    height: auto;
+    top: 50%;
+    left: 58%;
+

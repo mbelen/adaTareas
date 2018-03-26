@@ -1,0 +1,141 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+@color-hvr: #D56918;
+@color-perf: #FF88AB;
+
+/*Mayusculas*/
+button{
+	text-transform: uppercase;
+}
+
+h1{
+	padding: 1em;
+}
+
+nav{
+	padding: 2em;
+}
+
+.mainContainer{
+	text-align: center;
+	margin: auto;
+}
+
+/* Quito bordes*/
+.boton{
+	border-color: #FFFFFF;
+}
+
+
+/* para la galeria de imagenes*/
+
+.item{
+	position: relative;
+	margin: 0;
+}
+
+.galeria{
+	padding: 0 2em 0 2em;
+}
+
+.galeria img{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.texto{
+	position: absolute;
+	background-color: @color-hvr;
+	color: white;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	padding: 1em 0.5em 1em 0em; 
+}
+
+.columna1 , .columna2 ,.columna3, .columna4{
+	padding:0.2em;
+}
+
+/* Botonera */
+
+.fotos_botones{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.botonera{
+	position: relative;
+	width: 200px;
+	height: auto;
+	padding: 3em 0 1em 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	
+}
+
+.botonera p{
+	position: absolute;
+	background-color: white;
+	border-radius: 25px;
+	padding: 0.5em 1em 0.5em 1em;
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+/* Multimedia Sector*/
+.multiMed{
+	display: flex;
+	justify-content: center;
+	
+}
+
+video{
+	width: 50%;
+	height: auto;
+	padding-top: 3em;
+}
+
+.profile{
+	width: 25%;
+	height: auto;
+	margin-left: 2em;
+	padding-top: 3em;
+}
+
+/* Perfil */
+.multiMed a p {
+	width: 100%;
+	color: black;
+	background-color: @color-perf;
+	padding: 1em auto 1em auto;
+	text-decoration: none;
+}
+
+figure img{
+	width: 200px;
+	border-radius: 300px;
+}
+/* Media Queries*/
+
+@media screen and (max-width: 450px){
+	.columna1 , .columna2 , .columna4{
+		display: none;
+	}
+	.columna3{
+		width: 100%;
+		height: auto;
+		padding:0;
+		margin: 0;
+	}
+
+
+}
