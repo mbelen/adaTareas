@@ -4,14 +4,20 @@
 }
 
 h1 {
-	background-color: pink;
-    text-shadow: 2px 2px #FFFFFF;
-    size: 4em;
+	width: 100%;
+	color: pink;
+    text-shadow: 1px 1px #040404;
+
+}
+
+body{
+	display: flex;
+	justify-content: center;
 }
 
 footer{
 	text-align: center;
-	padding: 4em;
+	padding: 4em 4em 2em 4em;
 }
 
 a{
@@ -19,7 +25,7 @@ a{
 }
 
 a:visited{
-
+	color:pink;
 }
 
 a:hover{
@@ -43,12 +49,22 @@ img .perfil{
 }
 
 .contCard{
-	margin-right: 30%;
-	margin-left: 30%;
+	width: 40%;
+	height: 60%;
 	padding-top: 2em;
 	text-align: center;
 	border: 0.10em solid black;
+	display: flex;
+	flex-direction: column;
 	
+}
+
+.colorBarra{
+	width: 100%;
+	height: 2em;
+	padding:0;
+	margin: 0;
+
 }
 
 .titulos{
@@ -72,6 +88,6 @@ img .perfil{
     position:absolute;
 	width: 5em;
     height: auto;
-    top: 50%;
-    left: 58%;
+    top: 56%;
+    left: 65%;
 
