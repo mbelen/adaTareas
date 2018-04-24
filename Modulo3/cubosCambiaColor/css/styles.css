@@ -1,0 +1,45 @@
+.sector1{
+	background-color: red;
+	width: 100%;
+	height: 10em;
+}
+
+.sector2{
+	display: flex;
+	flex-direction: row;
+}
+
+.pez1{
+	background-color: green;
+	width: 50%;
+	height: 20em;
+	margin: 1em 0.5em 0 0;
+}
+
+.pez2{
+	background-color: yellow;
+	width: 50%;
+	height: 20em;
+	margin: 1em 0 0.5em 0;
+}
+
+.sector3{
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+	
+}
+
+.pollo1, .pollo3{
+	background-color: blue;
+	width: 33.3%;
+	height: 20em;
+	margin: 1em 0 0 0;
+}
+
+.pollo2{
+	background-color: red;
+	width: 33.3%;
+	height: 20em;
+	margin: 1em;
+}
