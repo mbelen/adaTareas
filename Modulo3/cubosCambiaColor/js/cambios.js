@@ -8,14 +8,15 @@ if (document.getElementById("sector1").style.backgroundColor === 'red') {
     }
 }
 
-document.getElementById("peces").onclick = function() {switchColor()};
+document.getElementsByClassName("peces").onclick = function() {switchColor()};
 
 function switchColor(){
-	if (document.getElementsByClassName("pez1").style.backgroundColor === 'green' || document.getElementsByClassName("pez2").style.backgroundColor === 'yellow' ){
-		document.getElementsByClassName("pez1").style.backgroundColor = 'yellow';
-		document.getElementsByClassName("pez2").style.backgroundColor = 'green';
+	if (document.getElementById("pez1").style.backgroundColor === 'green' && document.getElementById("pez2").style.backgroundColor === 'yellow' ) {
+		document.getElementById("pez1").style.backgroundColor = 'yellow';
+		document.getElementById("pez2").style.backgroundColor = 'green';
 	}else{
-		document.getElementsByClassName("pez1").style.backgroundColor = 'green';
-		document.getElementsByClassName("pez2").style.backgroundColor = 'yellow';
+		document.getElementById("pez1").style.backgroundColor = 'green';
+		document.getElementById("pez2").style.backgroundColor = 'yellow';
 	}
 }
+

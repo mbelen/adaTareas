@@ -1,0 +1,17 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: 0;
+	font-family: 'Open Sans';
+}
+
+img{
+	width: 10%;
+}
+
+.imgSec{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-content: space-around;
+}
