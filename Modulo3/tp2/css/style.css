@@ -1,0 +1,14 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+img{
+    width: auto;
+    height: 100px;
+    padding: 0.5em;
+    border: 1px solid #8a4419;
+    border-style: inset;
+    margin: 0 0.25em 0.25em;
+}
+

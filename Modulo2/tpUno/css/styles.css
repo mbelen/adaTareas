@@ -1,0 +1,180 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body {
+	font-family: 'Open Sans';
+}
+
+#container {
+	width:95%;
+	margin:0 auto;
+}
+
+header, section:not(#carousel), footer {
+	margin:10px 0;
+	padding:0 20px;
+}
+
+header {
+	background-color: #54a4a6 ;
+	height:75px;
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+header nav a {
+	padding:0 10px;
+	color:white;
+}
+
+img.logokitty{
+	padding-top: 1em;
+}
+
+a, a:visited, a:hover {
+	color:white;
+	text-decoration: none;
+}
+
+.social-media {
+	text-align:right;
+}
+
+section.seccion-upper {
+	border:1px #D3CECE;
+	height:120px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.porotito{
+	color: #FFFFFF;
+}
+
+.seccion-upper .imagen {
+	width:100px;
+	height:100px;
+}
+
+.social-icon {
+	display:inline-block;
+	width:36px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+}
+
+.quiensoy {
+	align-self:flex-start;
+	text-align:left;
+	width:60%;
+	overflow:hidden;
+}
+
+.quiensoy h2 {
+	margin:10px 0;
+	color:#54a4a6;
+	font-weight: bold;
+}
+
+.profile-cat {
+	width: 100px;
+	height: 100px;
+}
+
+/*Carrusel*/
+section#carousel {
+	height:340px;
+	background-color:#FFFFFF;
+	overflow:hidden;
+}
+
+.carousel-item {
+	height:340px;
+}
+
+#slide1 {
+	background-image:url("../img/aguscat.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#slide2 {
+	background-image:url("../img/adacat.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+#slide3 {
+	background-image:url("../img/elifer.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#slide4 {
+	background-image:url("../img/zoecat1.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+
+#slide5 {
+	background-image:url("../img/zoecat2.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+p.d-block {
+	padding:20px;
+	font-size:36px;
+}
+
+section.seccion-lower {
+	padding:0;
+	display:flex;
+	justify-content:space-between;
+}
+
+.modulo {
+	height:200px;
+	width:33%;
+	padding:20px;
+}
+
+.modulo-img {
+	width:150px;
+	height:150px;
+	float:left;
+	margin-right:10px;
+}
+
+.modulo h4 {
+	margin:5px 0;
+	color:#54a4a6;
+}
+
+footer {
+	background-color: #54a4a6;
+	height:75px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+@media (max-width:1024px) {
+	.modulo {
+		height:100%;
+		text-align:center;
+	}
+
+	.modulo-img {
+		float:none;
+		margin:0 auto;
+	}	
+}

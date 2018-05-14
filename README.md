@@ -14,4 +14,7 @@ TAREAS de ADA ITW
 + (09/03/2028) __integradorCSS__ - TP para integrar CSS (corregido con bandera).
 + (16/03/2018) integradorResponsive - TP de integracion al responsive (corregido pero puede mejorar)
 + (19/03/2018) tpGrupalParqueC - TP grupal el original se encuentra en el Repositorio de Constanza Beccan ( https://github.com/Cobecc/proyPark ).
-+ (23/03/2018) TPUno - Maquetacion y utilizacion de lo aprendido hasta ahora. TP grupal de a 2 (repositorio original en el github de Mercedes https://github.com/mechamech/Ada_TP1 ).
++ (23/03/2018) TP1 - Maquetacion y utilizacion de lo aprendido hasta ahora. TP grupal de a 2 (repositorio original en el github de Mercedes https://github.com/mechamech/Ada_TP1 ).
+
+## MODULO 3:
++ (18/05/2018) TP2 - Work in Progress!!
