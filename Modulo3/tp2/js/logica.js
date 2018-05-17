@@ -20,8 +20,7 @@ $(document).ready(function(){
     var cantCartas = 12;
     var intentos = 24;
 
-
-
+    
     function ingresoNomb() {
         var person = prompt("Porfavor Ingrese su Nombre:", "Jugador1");
         if (person == null || person == "") {
@@ -33,6 +32,12 @@ $(document).ready(function(){
     }
 
     ingresoNomb();
+
+    function chancesContador(){
+        $('#chancesIntentos').text('Intentos: '+ intentos);
+    }
+
+    
 
     // ***Funcion para mesclar las cartas***
     function shuffle(arrayR) {
@@ -48,7 +53,7 @@ $(document).ready(function(){
 
     // ***Insertar cartas con sus propios ID + atributos y clases genericos**
     for (var i = 0; i < cantCartas; i = i + 1){
-        var carta = $("<img></img>").attr("src","img/dorso.jpg").attr("class", "carta dorso").attr("id", "card"+i);
+        var carta = $("<img></img>").attr("src","img/dorso.png").attr("class", "carta dorso").attr("id", "card"+i);
         mazo.push(carta);
         
     }
@@ -74,7 +79,7 @@ $(document).ready(function(){
     }
 
     function ocultarCarta(){
-        $(this).attr('src', 'img/dorso.jpg');                
+        $(this).attr('src', 'img/dorso.png');                
         $(this).addClass("dorso");
     }
 
@@ -91,10 +96,11 @@ $(document).ready(function(){
 	                console.log(dataCompare+" entro en el estado 1");//esto es para chequear en la consola si entro bien
 	                $(this).removeClass("dorso");	                
 	            }else{
-	                console.log(dataCompare+" entro en el estado 2");
+	                console.log(dataCompare +" entro en el estado 2");
+                    $(dataCompare).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
                     intentos = intentos - 1;
                     console.log("quedan " + intentos);
-                    $(dataCompare).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
+                    chancesContador();
 	                $(this).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);	                
 	                
 	            }
@@ -104,27 +110,19 @@ $(document).ready(function(){
         };  
 
     //*** al escuchar el click ... ***
-    $(".carta").click(function(){
-    	
-    	if ($(this).hasClass("dorso") && flag){
-    		flag= false; 
-    		$(this).fadeTo("slow", 0.3, 
-    			function(){ 
-    				mostrarCarta(this);
-    				$(this).checkCardData();
-    			}
-    		).fadeTo("slow",1);
-        	//setTimeout($(this).checkCardData(), 3000);	
-    	}        
-        // $(this).checkCardData();
-
-        function chancesContador(){
-            $('#chancesIntentos').text(intentos);
-        }
-    
-        chancesContador();
+        $(".carta").click(function(){
+            
+            if ($(this).hasClass("dorso") && flag){
+                flag= false; 
+                $(this).fadeTo("slow", 0.3,function(){ 
+                    mostrarCarta(this);
+                    $(this).checkCardData();
+                }).fadeTo("slow",1);
+                    
+            }        
+        
+          
     });
 
-    
-
 });
+
