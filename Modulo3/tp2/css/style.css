@@ -41,6 +41,10 @@ img{
 
 .sector1{
     width: 50%;
+    padding: 0;
+    margin: 0;
+    background-color: lightcoral;
+    border-radius: 6px 35px ;
     display: flex;
     justify-content: center;
     flex-direction: column;
