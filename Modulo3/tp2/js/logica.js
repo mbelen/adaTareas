@@ -15,12 +15,26 @@ $("img").css(background:) -- Acá cambia la cara
 var flag = true; // este flag controla que no se pueda seleccionar otra carta hasta terminar la animacion
 
 $(document).ready(function(){
-    // inicializacion de array y cantidad
+    // **** Inicializacion de array y cantidad  de cartas a usar ***
     var mazo = [];
     var cantCartas = 12;
     var intentos = 24;
 
-    // Funcion para mesclar las cartas
+
+
+    function ingresoNomb() {
+        var person = prompt("Porfavor Ingrese su Nombre:", "Jugador1");
+        if (person == null || person == "") {
+            ingresoNomb();
+        } else {
+            $('#nombre').text(person)
+        }
+    
+    }
+
+    ingresoNomb();
+
+    // ***Funcion para mesclar las cartas***
     function shuffle(arrayR) {
         var j, x, i;
         for (i = arrayR.length - 1; i > 0; i--) {
@@ -32,20 +46,20 @@ $(document).ready(function(){
         return arrayR;
     }
 
-    // insertar cartas con sus id
+    // ***Insertar cartas con sus propios ID + atributos y clases genericos**
     for (var i = 0; i < cantCartas; i = i + 1){
         var carta = $("<img></img>").attr("src","img/dorso.jpg").attr("class", "carta dorso").attr("id", "card"+i);
         mazo.push(carta);
         
     }
 
-    // Generacion de data para asignar el valor de la imagen
+    // ***Generacion de data para asignar el valor de la imagen, esto es para la comparacion***
     for(var i = 0; i < cantCartas / 2; i = i + 1){
         mazo[i] = mazo[i].attr("data-id", "codigo" + (i+1));
         mazo[(cantCartas / 2)+i] = mazo[(cantCartas / 2)+i].attr("data-id", "codigo" + (i+1));
     }
 
-    // Desordeno el mazo
+    // Desordeno el mazo >_< wiiiiiiiiiiii
     shuffle(mazo);
 
         for(var i = 0; i<mazo.length; i = i + 1 ){
@@ -54,7 +68,7 @@ $(document).ready(function(){
         }
     
     
-
+    // ***LAs siguientes fuinciones son para descubrir y ocultar las cartas.***
     function mostrarCarta(card){
         $(card).attr('src', 'img/' + $(card).data('id') +'.png');        
     }
@@ -64,23 +78,23 @@ $(document).ready(function(){
         $(this).addClass("dorso");
     }
 
+    //*** Aca sucede la magia***
     var dataCompare = null;
         $.fn.checkCardData = function(){        	
             if (dataCompare == null){ // Si es la primera vez
                 dataCompare = "#"+$(this).attr('id');
                 $(this).removeClass("dorso");                
-                // console.log(dataCompare);
             }else {	// si dataCompare tiene una id, compraro
 
 	            if($(dataCompare).attr('data-id') == $(this).attr('data-id')){
-	                // console.log($(dataCompare));
 	                console.log($(this).attr('data-id'));
-	                console.log(dataCompare+"1");
+	                console.log(dataCompare+" entro en el estado 1");//esto es para chequear en la consola si entro bien
 	                $(this).removeClass("dorso");	                
 	            }else{
-	                console.log(dataCompare+"2");
-	                intentos = intentos - 1;
-	                $(dataCompare).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
+	                console.log(dataCompare+" entro en el estado 2");
+                    intentos = intentos - 1;
+                    console.log("quedan " + intentos);
+                    $(dataCompare).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
 	                $(this).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);	                
 	                
 	            }
@@ -89,6 +103,7 @@ $(document).ready(function(){
 	        setTimeout(function(){flag = true;}, 500);	
         };  
 
+    //*** al escuchar el click ... ***
     $(".carta").click(function(){
     	
     	if ($(this).hasClass("dorso") && flag){
@@ -102,8 +117,14 @@ $(document).ready(function(){
         	//setTimeout($(this).checkCardData(), 3000);	
     	}        
         // $(this).checkCardData();
+
+        function chancesContador(){
+            $('#chancesIntentos').text(intentos);
+        }
+    
+        chancesContador();
     });
 
-
+    
 
 });
