@@ -12,9 +12,9 @@ TAREAS de ADA ITW
 ## MODULO 2:
 + (09/03/2018) __TPCero__ - Saber que es un Mock y como utilizarlo.
 + (09/03/2028) __integradorCSS__ - TP para integrar CSS (corregido con bandera).
-+ (16/03/2018) integradorResponsive - TP de integracion al responsive (corregido pero puede mejorar)
-+ (19/03/2018) tpGrupalParqueC - TP grupal el original se encuentra en el Repositorio de Constanza Beccan ( https://github.com/Cobecc/proyPark ).
-+ (23/03/2018) TP1 - Maquetacion y utilizacion de lo aprendido hasta ahora. TP grupal de a 2 (repositorio original en el github de Mercedes https://github.com/mechamech/Ada_TP1 ).
++ (16/03/2018) __integradorResponsive__ - TP de integracion al responsive (corregido pero puede mejorar)
++ (19/03/2018) __tpGrupalParqueC__ - TP grupal el original se encuentra en el Repositorio de Constanza Beccan ( https://github.com/Cobecc/proyPark ).
++ (23/03/2018) __TP1__ - Maquetacion y utilizacion de lo aprendido hasta ahora. TP grupal de a 2 (repositorio original en el github de Mercedes https://github.com/mechamech/Ada_TP1 ).
 
 ## MODULO 3:
-+ (18/05/2018) TP2 - Work in Progress!!
++ (18/05/2018) __TP2__ - Work in Progress!!
