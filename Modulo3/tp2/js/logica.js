@@ -18,7 +18,7 @@ $(document).ready(function(){
     // **** Inicializacion de array y cantidad  de cartas a usar ***
     var mazo = [];
     var cantCartas = 12;
-    var intentos = 10;
+    var intentos = 8;
     var win = cantCartas / 2;
 
     
@@ -116,8 +116,8 @@ $(document).ready(function(){
                     intentos = intentos - 1;
                     console.log("quedan " + intentos);
                     chancesContador();
-                    finJuego();
-	                $(this).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);	                
+                    $(this).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
+                    finJuego();	                
 	                
 	            }
 	            dataCompare = null;     
