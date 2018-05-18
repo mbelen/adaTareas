@@ -18,7 +18,8 @@ $(document).ready(function(){
     // **** Inicializacion de array y cantidad  de cartas a usar ***
     var mazo = [];
     var cantCartas = 12;
-    var intentos = 24;
+    var intentos = 10;
+    var win = cantCartas / 2;
 
     
     function ingresoNomb() {
@@ -83,6 +84,18 @@ $(document).ready(function(){
         $(this).addClass("dorso");
     }
 
+    // Funcion que termina el juego
+    function finJuego(){
+        if (intentos == 0){
+            alert("Perdiste\nDesea volver a jugar?");
+            location.reload();
+        }else if(win == 0){
+            alert("Ganaste\nDesea volver a jugar?");
+            location.reload();
+        }
+
+    }
+
     //*** Aca sucede la magia***
     var dataCompare = null;
         $.fn.checkCardData = function(){        	
@@ -94,17 +107,20 @@ $(document).ready(function(){
 	            if($(dataCompare).attr('data-id') == $(this).attr('data-id')){
 	                console.log($(this).attr('data-id'));
 	                console.log(dataCompare+" entro en el estado 1");//esto es para chequear en la consola si entro bien
-	                $(this).removeClass("dorso");	                
+                    $(this).removeClass("dorso");
+                    win = win - 1;
+                    finJuego();	                
 	            }else{
 	                console.log(dataCompare +" entro en el estado 2");
                     $(dataCompare).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
                     intentos = intentos - 1;
                     console.log("quedan " + intentos);
                     chancesContador();
+                    finJuego();
 	                $(this).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);	                
 	                
 	            }
-	            dataCompare = null;      
+	            dataCompare = null;     
 	        }
 	        setTimeout(function(){flag = true;}, 500);	
         };  
