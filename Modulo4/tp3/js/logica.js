@@ -28,7 +28,6 @@ $(document).ready(function(){
     
     var recuperarDatos = localStorage.getItem('arrayDeJugadores');
     
-
     
     function ingresoNomb() {
         person = prompt("Porfavor Ingrese su Nombre:", "Jugador");
@@ -150,18 +149,27 @@ $(document).ready(function(){
         datosJugadorActual = {nomb:person, timeScore:time};
         console.log(datosJugadorActual); // muestro el JSON
         
-        if(recuperarDatos == null){
-            var arrayDeJugadores = [];
-        }else{
-            arrayDeJugadores = JSON.parse(recuperarDatos).arrayDeJugadores;
+        
+        if(recuperarDatos != 'undefined'){
+            console.log(recuperarDatos); 
+            arrayDeJugadores = JSON.parse(recuperarDatos);
         }
-
-        console.log(recuperarDatos); //recuperacion de datos
-       
+        
         arrayDeJugadores.push(datosJugadorActual);
-
-        localStorage.setItem('arrayDeJugadores', JSON.stringify(arrayDeJugadores)); // pisando player parseandolo como string
         console.log(arrayDeJugadores); // muestro el Array
+        let arrayJson = {'datos':arrayDeJugadores};
+        localStorage.setItem('arrayDeJugadores', arrayJson); // pisando player parseandolo como string
+        
+
+        // if(recuperarDatos == null||recuperarDatos == undefined){
+        //     var arrayDeJugadores = [];
+        // }else{
+        //     console.log("arrayDeJugadores :"+JSON.stringify(arrayDeJugadores));
+        //     arrayDeJugadores = JSON.parse(recuperarDatos);
+        // }
+
+         //recuperacion de datos
+        
 
     }
 
