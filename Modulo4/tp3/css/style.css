@@ -1,0 +1,74 @@
+*{
+	margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: darkslateblue;
+}
+
+img{
+    width: auto;
+    height: 100px;
+    padding: 0.5em;
+    border: 1px solid #8a4419;
+    border-style: inset;
+    margin: 0 0.25em 0.25em;
+    background-color: aliceblue;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.canvas {
+    width: 30em;
+    height: auto;
+    
+}
+
+.mainContainer{
+    width: 800px;
+    height: 600px;
+    background-color: lemonchiffon;
+    border-radius: 15px 50px;
+    border: 4px solid lightcoral;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    left: -0.25em;
+    display: flex;
+    
+}
+
+.sector1{
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    background-color: lightcoral;
+    border-radius: 6px 35px ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+.sector2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nombrepj, .tiempo{
+    color: antiquewhite;
+}
+.parte1{
+    text-align: center;
+}
+
+.parte2{
+    text-align: center;
+}
+
