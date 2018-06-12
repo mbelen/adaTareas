@@ -43,7 +43,9 @@ $(document).ready(function(){
     ingresoNomb();
 
     function ingresoDificultad() {
+        
         var levelDif = prompt("Ingrese:\n1 para Facil.\n2 para Medio.\n3 para Dificil", "1");
+        
         switch (levelDif) {
             case "1" :
                 intentos = 18;
@@ -62,26 +64,31 @@ $(document).ready(function(){
                 break;
         }
     }
+    
     ingresoDificultad();
 
+    
+    //** Contador visual de Intentos/Chances **/
     function chancesContador(){
         $('#chancesIntentos').text('Intentos: '+ intentos);
     }
 
-    //** Timer **
+    //** Timer ** 
 
     function startTimer(){
         var timer = document.getElementById("timer");
+        
         interval = setInterval(function(){
             time++;
             timer.innerHTML = time;
             console.log(time);
+        
         },1000);
       }
       
     function stopTimer(){
         clearInterval(interval);
-      }
+    }
 
     startTimer();
 
@@ -150,32 +157,31 @@ $(document).ready(function(){
         console.log(datosJugadorActual); // muestro el JSON
         
         
-        if(recuperarDatos != 'undefined'){
-            console.log(recuperarDatos); 
+        if(recuperarDatos != 'undefined'&& recuperarDatos != null){
             arrayDeJugadores = JSON.parse(recuperarDatos);
+            console.log(recuperarDatos); // recuperacion de datos
         }
         
         arrayDeJugadores.push(datosJugadorActual);
-        console.log(arrayDeJugadores); // muestro el Array
-        let arrayJson = {'datos':arrayDeJugadores};
-        localStorage.setItem('arrayDeJugadores', arrayJson); // pisando player parseandolo como string
+
+        localStorage.setItem('arrayDeJugadores', JSON.stringify(arrayDeJugadores)); // pisando player parseandolo como string
         
-
-        // if(recuperarDatos == null||recuperarDatos == undefined){
-        //     var arrayDeJugadores = [];
-        // }else{
-        //     console.log("arrayDeJugadores :"+JSON.stringify(arrayDeJugadores));
-        //     arrayDeJugadores = JSON.parse(recuperarDatos);
-        // }
-
-         //recuperacion de datos
+        console.log(arrayDeJugadores); // muestro e Array
+        
         
 
     }
 
     function creaRank(){
+        console.log(recuperarDatos);
+
+        arrayDeJugadores = JSON.parse(recuperarDatos);
+
+        console.log(arrayDeJugadores);
+
         for(var i=0 ; i < arrayDeJugadores.length; i++){
-            var print = `<li> ${localStorage.arrayDeJugadores[i].nomb} ${localStorage.arrayDeJugadores[i].timeScore} </li>`
+            // var print = `<li> ${localStorage.arrayDeJugadores[i].nomb} ${localStorage.arrayDeJugadores[i].timeScore} </li>`
+            var print = `<li>${arrayDeJugadores[i].nomb} ${arrayDeJugadores[i].timeScore} </li>`
             console.log(print);
             $("#ranking").append(print);
         }
@@ -191,47 +197,63 @@ $(document).ready(function(){
     //*** Aca sucede la magia***
     var dataCompare = null;
         $.fn.checkCardData = function(){        	
+            
             if (dataCompare == null){ // Si es la primera vez
                 dataCompare = "#"+$(this).attr('id');
                 $(this).removeClass("dorso");                
-            }else {	// si dataCompare tiene una id, compraro
+            
+            }else{	// si dataCompare tiene una id, compraro
 
 	            if($(dataCompare).attr('data-id') == $(this).attr('data-id')){
 	                console.log($(this).attr('data-id'));
 	                console.log(dataCompare+" entro en el estado 1");//esto es para chequear en la consola si entro bien
+            
                     win = win -1;
+            
                     console.log(win);
+            
                     $(this).removeClass("dorso");
+            
                     finJuego();	                
-	            }else{
-	                console.log(dataCompare +" entro en el estado 2");
+            
+                }else{
+            
+                    console.log(dataCompare +" entro en el estado 2");
+            
                     $(dataCompare).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
                     intentos = intentos - 1;
+            
                     console.log("quedan " + intentos);
+            
                     chancesContador();
+            
                     $(this).fadeTo("slow", 3, ocultarCarta).fadeTo("slow",1);
+            
                     finJuego();	                
 	                
 	            }
-	            dataCompare = null;     
+            
+                dataCompare = null;     
 	        }
-	        setTimeout(function(){flag = true;}, 500);	
+            
+            setTimeout(function(){flag = true;}, 500);	
         };  
 
     //*** al escuchar el click ... ***
-        $(".carta").click(function(){
-            
-            if ($(this).hasClass("dorso") && flag){
+        $(".carta").click(function()
+        {
+            if ($(this).hasClass("dorso") && flag)
+            {
                 flag= false; 
-                $(this).fadeTo("slow", 0.3,function(){ 
+                $(this).fadeTo("slow", 0.3,function()
+                { 
                     mostrarCarta(this);
                     $(this).checkCardData();
                 }).fadeTo("slow",1);
                     
             }        
-        
-          
-    });
+
+        });
 
 });
 
