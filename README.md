@@ -23,4 +23,6 @@ TAREAS de ADA ITW
 + (11/06/2018) __TP3__ - Memotest con timer y ranking.
 
 ## MODULO 5:
-+ (16/06/2018) __TP4__ - 
++ (16/06/2018) __TP4__ - Formulario Hecho con Zoe.
++ (19/06/2018) __Express__ - Algunos ejercicios en express
++ (06/2018) __TP5__ - en Progreso...
