@@ -4,4 +4,25 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+
+    header.cab
+      section.tituloApp
+        h1 title
+      section.sectMailBox
+        img(src='/source/round_all_inbox_black_48pt_3x.png')
+    
+    div.cuerpo
+      block content
+
+    footer
+      a(href='#')
+        img(src='/source/round_home_black_48dp.png')
+      a(href='#')
+        img(src='/source/round_search_black_48dp.png')
+      a(href='#')
+        img(src='/source/round_camera_enhance_black_48dp.png')
+      a(href='#')
+        img(src='/source/round_favorite_border_black_48dp.png')
+      a(href='#')
+        img(src='/source/round_face_black_48dp.png')
+    

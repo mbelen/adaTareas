@@ -15,9 +15,7 @@ $("img").css(background:) -- Acá cambia la cara
 var flag = true; // este flag controla que no se pueda seleccionar otra carta hasta terminar la animacion
 var arrayDeJugadores = [];
 
-$(document).ready(function(){
-    // **** Inicializacion de array y cantidad  de cartas a usar ***
-    var mazo = [];
+var mazo = [];
     var cantCartas = 12;
     var intentos = 100;
     var win = cantCartas / 2;
@@ -26,9 +24,10 @@ $(document).ready(function(){
     
     var datosJugadorActual = {};
     
-    var recuperarDatos = localStorage.getItem('arrayDeJugadores');
+    var recuperarDatos = null;
     
-    
+
+
     function ingresoNomb() {
         person = prompt("Porfavor Ingrese su Nombre:", "Jugador");
         if (person == null || person == "") {
@@ -40,9 +39,7 @@ $(document).ready(function(){
     
     }
 
-    ingresoNomb();
-
-    function ingresoDificultad() {
+ function ingresoDificultad() {
         
         var levelDif = prompt("Ingrese:\n1 para Facil.\n2 para Medio.\n3 para Dificil", "1");
         
@@ -64,11 +61,10 @@ $(document).ready(function(){
                 break;
         }
     }
-    
-    ingresoDificultad();
 
-    
-    //** Contador visual de Intentos/Chances **/
+
+
+//** Contador visual de Intentos/Chances **/
     function chancesContador(){
         $('#chancesIntentos').text('Intentos: '+ intentos);
     }
@@ -81,7 +77,7 @@ $(document).ready(function(){
         interval = setInterval(function(){
             time++;
             timer.innerHTML = time;
-            console.log(time);
+            //console.log(time);
         
         },1000);
       }
@@ -89,8 +85,6 @@ $(document).ready(function(){
     function stopTimer(){
         clearInterval(interval);
     }
-
-    startTimer();
 
     // ***Funcion para mesclar las cartas***
     function shuffle(arrayR) {
@@ -117,15 +111,8 @@ $(document).ready(function(){
         mazo[(cantCartas / 2)+i] = mazo[(cantCartas / 2)+i].attr("data-id", "codigo" + (i+1));
     }
 
-    // Desordeno el mazo >_< wiiiiiiiiiiii
-    shuffle(mazo);
 
-        for(var i = 0; i<mazo.length; i = i + 1 ){
-            $("#board").append(mazo[i]);
-            
-        }
-    
-    
+
     // ***Las siguientes fuinciones son para descubrir y ocultar las cartas.***
     function mostrarCarta(card){
         $(card).attr('src', 'img/' + $(card).data('id') +'.png');        
@@ -187,9 +174,6 @@ $(document).ready(function(){
         }
 
     }
-    creaRank();
-    
-    
 
 
 
@@ -239,6 +223,29 @@ $(document).ready(function(){
             setTimeout(function(){flag = true;}, 500);	
         };  
 
+    
+
+
+$(document).ready(function(){
+
+	// **** Inicializacion de array y cantidad  de cartas a usar ***
+    ingresoNomb();
+    ingresoDificultad();
+    startTimer();
+    // Desordeno el mazo >_< wiiiiiiiiiiii
+    shuffle(mazo);
+        for(var i = 0; i<mazo.length; i = i + 1 ){
+            $("#board").append(mazo[i]);
+            
+        }
+    recuperarDatos = localStorage.getItem('arrayDeJugadores');
+    if (recuperarDatos == null){
+    	saveInfo();
+    	recuperarDatos = localStorage.getItem('arrayDeJugadores');
+    }
+    
+    creaRank();
+
     //*** al escuchar el click ... ***
         $(".carta").click(function()
         {
@@ -254,6 +261,5 @@ $(document).ready(function(){
             }        
 
         });
-
 });
 
