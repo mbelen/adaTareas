@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navClass
+      span.spanNav
+        a(href='/') Home
+      |  | 
+      span.spanNav
+        a(href='/') Pets 
+      |  | 
+      span.spanNav
+        a(href='/') Favs
+      |  | 
+    block content

@@ -2,7 +2,7 @@ extends layout
 
 block content
     form#uploadForm(ref='uploadForm' action='/upload' method='post' enctype='multipart/form-data')
-        input(type='file' name='sampleFile')
+        input(type='file' name='fotoUp')
         input.commentSect(type="text" name="comment" placeholder="Comentario")
         
         input(type='submit' value='Upload!')

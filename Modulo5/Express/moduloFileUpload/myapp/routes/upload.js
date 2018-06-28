@@ -1,36 +1,26 @@
 var express = require('express');
-
 var router = express.Router();
 
-posteos = []
+/*
+Los js de routes se dedican a marcar el camino por donde pasaran los datos utilizando metodos.
+Los Metodos son los siguientes:
+   GET: recupera recursos.
+   POST: crea un recurso.
+   PUT: modifica un recurso.
+   DELETE: elimina un recurso.
+*/
+
+//Aqui se declara a dodne ira a buscar el controlador 
+var controlador = require("../controllers/controladores");
 
 //GET
 router.get('/', function(req, res, next) {
 
-  res.render('upload');
-});
-
-//POST
-router.post('/', function(req, res) {
-
-    console.log(req.files)
-    let sampleFile = req.files.sampleFile;
-    let comentario = req.body.comment;
-  
-    console.log(sampleFile);
-    console.log(req.body);
-  
-    var fileName = req.files.sampleFile.name;
-
-   
-    sampleFile.mv('./public/images/' + fileName, function(err) {
-      
-      if (err)
-        return res.status(500).send(err);
-   
-      res.render('doneUpload');
-    });
-  
+	res.render('upload');
   });
 
-module.exports = router;
+//POST
+router.post('/', controlador.postNuevo);
+
+//PUT
+router.put('/', controlador.favs);
