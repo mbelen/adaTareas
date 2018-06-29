@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  aside
+    form#uploadForm(ref='uploadForm' action='/' method='post' enctype='multipart/form-data')
+      label.pegunt Mascota:
+      select(name='mascota')
+        option(value='perro' type="text") Perro
+        option(value='gato') Gato
+        option(value='ave') Ave
+        option(value='roedor') Roedor
+      label.pegunt Tamanio:
+      select(name='tamanio')
+        option(value='pequenio') Pequenio
+        option(value='mediano') Mediano
+        option(value='grande') Grande
+      label.pegunt Edad:
+      select(name='edad')
+        option(value='bebe') Bebe
+        option(value='joven') Joven
+        option(value='adulto') Adulto
+      input(id="keepBtn" type="submit" value="filtrar")
+  main
