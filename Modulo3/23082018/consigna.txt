@@ -1,0 +1,6 @@
+CONSIGNAS
+=========
+
++ sector 1 - 1 div  Negro a Rojo (toggle y css)
++ sector 2 - 2 divs de abajo si tocas en uno cambia al otro color (switch de verde y amarillo).
++ sector 3 - 3 divs los 3 de abajo son rojos y si toco en el medio cambian los del costado.

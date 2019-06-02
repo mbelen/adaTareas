@@ -1,0 +1,77 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+header{
+  background-color:#fff;
+  width: 100%;
+  position: fixed;
+  box-shadow: 2px 4px 10px rgba(0,0,0,.2);
+}
+
+a {
+  color: #00B7FF;
+}
+
+a img{
+  
+}
+
+section.tituloAPP{
+  width: 70%;
+}
+
+section.sectMailBox{
+  width: 30%;
+}
+
+footer{
+  background-color:#fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  box-shadow: 0 -5px 10px -5px rgba(0,0,0,.2);
+  bottom: 0px;
+  position: fixed;
+}
+
+form{
+  padding-top: 15em;
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  margin: 0.5em;
+}
+
+.cab{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.cuerpo{
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.tituloStyle{
+  padding-top: 0.50em;
+  font-size: 70px;
+  font-style: oblique;
+  font-stretch: expanded;
+}
+
+.posting{
+  padding-top: 20em;
+}

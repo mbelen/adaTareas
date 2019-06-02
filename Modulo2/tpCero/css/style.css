@@ -12,12 +12,8 @@ p{
 	font-family: sans-serif;
 }
 
-.cuerpoDePagina{
-	border-style: solid;
-	padding-top: 4em;
-	padding-bottom: 4em;
-	width:1600px ;
-	height: 800px;
+figure{
+	width: 100%;
 }
 
 .cabecera{
@@ -37,6 +33,7 @@ p{
 }
 
 .botones{
+	width: 100%;
 	padding-right: 4em;
 	text-align: right;
 }

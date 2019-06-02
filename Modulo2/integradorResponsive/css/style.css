@@ -1,0 +1,75 @@
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box; /*Esto para poder hacer que los elementos mantengan el tamaño definido*/
+}
+
+header{
+	height: 2em;
+	width: 100%;
+
+}
+
+nav{
+	padding-top: 0.5em;
+	display: inline-block;
+}
+
+a{
+ 	text-decoration: none;
+ 	font-family: sans-serif;
+}
+
+figure.logo{
+	padding: 0;
+	width: 2em;
+	height: 2em;
+	float: right;
+}
+
+figure.panel{
+	text-align: center;
+	width: 250px;
+	position: relative;
+	display: inline-block;
+}
+
+figcaption{
+	text-align: center;
+}
+
+
+
+img{
+	width: 2em;
+	height: 2em;
+}
+
+section{
+	width: 90%;
+	height: 60%;
+	padding: 2em 3em 2em 3em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+.foto{
+	width: 200px; 
+	height: 200px;
+	display: inline-block;
+}
+
+/*Media Queris*/
+
+@media screen and (max-width: 480px){
+	section{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+
+
+}

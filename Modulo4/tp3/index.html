@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Memotest</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="sector1">
+            <div class="parte1">
+                <h1 id="msjWoL"></h1>
+                    </br>
+                <h1 id="nombre" class="nombrepj">______</h1>
+                <h4 id="chancesIntentos">Ready?</h4>
+                </br>
+                </br>
+            </div>
+            <div class="parte2">
+                <h1 class="tiempo">Tiempo</h1>
+                <h3 id="timer">0</h3>
+                <input value="Reeiniciar" onclick="history.go(0)" type="button">
+            </br>
+            </br>
+                <h3>Ranking:</h3>
+                <ul id="ranking"></ul>
+      
+            </div>
+        </div>
+
+        <div class="sector2">
+            <div class="canvas" id="board"></div> <!-- esto son las cartas -->
+        </div>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/logica.js"></script>
+    </div>
+</body>
+</html>

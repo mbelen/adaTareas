@@ -10,5 +10,19 @@ TAREAS de ADA ITW
 + (07/03/2018) Creacion de formularios.Aprendemos a usar <form> (Elementos, Tipos y Atributos).
 
 ## MODULO 2:
-+ (09/03/2018) TPCero - Saber que es un Mock y como utilizarlo.
-+ (09/03/2028) integradorCSS - TP para integrar todo lo aprendido en css hasta el dia de hoy.
++ (09/03/2018) __TPCero__ - Saber que es un Mock y como utilizarlo.
++ (09/03/2028) __integradorCSS__ - TP para integrar CSS (corregido con bandera).
++ (16/03/2018) __integradorResponsive__ - TP de integracion al responsive (corregido pero puede mejorar)
++ (19/03/2018) __tpGrupalParqueC__ - TP grupal el original se encuentra en el Repositorio de Constanza Beccan ( https://github.com/Cobecc/proyPark ).
++ (23/03/2018) __TP1__ - Maquetacion y utilizacion de lo aprendido hasta ahora. TP grupal de a 2 (repositorio original en el github de Mercedes https://github.com/mechamech/Ada_TP1 ).
+
+## MODULO 3:
++ (18/05/2018) __TP2__ - Memotest.
+
+## MODULO 4:
++ (11/06/2018) __TP3__ - Memotest con timer y ranking.
+
+## MODULO 5:
++ (16/06/2018) __TP4__ - Formulario Hecho con Zoe.
++ (19/06/2018) __Express__ - Algunos ejercicios en express
++ (06/2018) __TP5__ - en Progreso...

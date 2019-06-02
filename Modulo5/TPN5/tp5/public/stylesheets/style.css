@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+aside{
+  width:30%;
+
+}
+
+main{
+  width: 70%;
+}
+
+form{
+  display: flex;
+  flex-direction: column
+}
+
+select{
+  width:8em;
+  text-align: center;
+  padding: 0.5em;
+  margin:0.25em 0 1em 3em;
+}
+
+input{
+  width: 10em;
+  padding: 0.25em;
+  margin:2em 0 0 5em;
+}
